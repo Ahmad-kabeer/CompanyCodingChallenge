@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// solved by Pappu Kumar (Coder Guy)
+string helper(string s)
+
+{
+    // find the common string
+
+    next_permutation(s.begin(),s.end());
+    return  s;
+
+}
+
+ 
+
+int main() {
+    string s;
+
+    cin>>s;
+    cout<<helper(s);
+
+    return 0;
+
+}
