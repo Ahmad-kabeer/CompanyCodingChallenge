@@ -1,0 +1,25 @@
+//cuckoo sequence
+#include<bits/stdc++.h>
+using namespace std;
+int helper(int n){
+	if(n==1){
+		return 0;
+	}
+	if(n==1){
+		return 1;
+	}
+	long long int cuckoo[n+1]={0};
+	cuckoo[1]=0;
+	cuckoo[2]=1;
+	for(int i=3;i<=n;i++){
+		cuckoo[i]=1*cuckoo[i-1]+2*cuckoo[i-2]+3*1;
+	}
+	return cuckoo[n];
+	
+}
+int main(){
+	int n;
+	cin>>n;
+	cout<<helper(n);
+	return 0;
+}
