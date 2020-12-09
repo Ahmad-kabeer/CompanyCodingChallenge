@@ -1,0 +1,55 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string helper(string s)
+
+// Solved By Pappu Kumar (Coder Guy)
+
+{
+    int arr[26]={0};  // there are 26 alphabets 
+in the english char
+    for(int i=0;i<s.length();i++) // loop through 
+the input string
+    {
+        arr[s[i]-97]++; // 
+to come back with the 0 position
+
+    }
+
+ 
+    string result="";
+
+    for(int i=0;i<26;i++)  // for character 
+count with loop
+    {
+        if(arr[i]>0) // if char is present
+
+        {
+            char ch = 97+i; // add the value of 
+ASCII value of i = 1 - taking b
+            result+=ch;
+
+            result+=to_string(arr[i]);
+
+        }
+
+    }
+
+    return result;
+
+}
+
+int main() {
+
+    string s;
+
+    cin>>s;
+
+ 
+
+    cout<<helper(s);
+
+    return 0;
+
+}
