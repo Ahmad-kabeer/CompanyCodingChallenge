@@ -1,0 +1,16 @@
+//mode 11
+#include<bits/stdc++.h>
+using namespace std;
+int helper(string s){
+	int res=0;
+	for(int i=0;i<s.length();i++){
+		res=((res*10)%11+(s[i]-'0')%11)%11;
+	}
+	return res;
+}
+int main(){
+	string n;
+	cin>>n;
+	cout<<helper(n);
+	return 0;
+}
