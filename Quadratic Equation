@@ -1,0 +1,10 @@
+#Finding the roots
+#ax^2+bx+c
+from math import sqrt
+a = int(input())#a
+b = int(input())#b
+c = int(input())#c
+root_1 = (-b+sqrt((b**2-4*a*c)))/2*a
+root_2 = (-b-sqrt((b**2-4*a*c)))/2*a
+print(root_1)
+print(root_2)
