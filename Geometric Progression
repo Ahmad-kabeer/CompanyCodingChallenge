@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+// Solved By Pappu Kumar (Coder Guy)
+
+ 
+int main() {
+
+    double second_term;
+
+    double third_term;
+
+    int n;
+
+    cin>>second_term>>third_term>>n;
+
+    double r = third_term/second_term;  //9/3=3
+
+    double a = second_term/r;
+
+    double nth_term = a * pow( r, n-1);
+
+ 
+    cout<<nth_term;
+
+return 0;
+
+}
