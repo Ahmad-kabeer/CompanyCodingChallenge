@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+// solved by Pappu Kumar (Coder Guy)
+string helper(string s1 , string s2)
+{
+    // use the in built function and this is pesent in the above library
+    // this is Dynamic programming question
+    // form a 2D DP Array
+    // with rows+coloumn
+    int dp[s1.length()+1][s2.length()+1];
+
+    for(int i=0;i<=s1.length();i++)
+    {
+        for(int j=0;j<s2.length();j++)
+        {
+            dp[i][j]=0;
+        }
+    }
+
+ 
+// solved by Pappu Kumar (Coder Guy)
+    for(int i=1;i<=s1.length();i++)
+    {
+        for(int j=1;j<=s2.length();j++)
+        {
+            if(s1[i-1]==s2[j-1])
+            {
+                dp[i][j]=1+dp[i-1][j-1];
+            }
+            else
+            {
+                dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
+            }
+        }
+    }
+
+    return dp[s1.length()][s2.length()];
+
+}
+// solved by Pappu Kumar (Coder Guy)
+int main() {
+    string s1;
+    string s2;
+
+    cin>>s1>>s2;
+    cout<<helper(s1,s2);
+
+    return 0;
+}
